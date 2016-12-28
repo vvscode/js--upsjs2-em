@@ -2,10 +2,9 @@
     <tr>
         <td>
 {{#each model as |item|}}
-<p>{{#link-to 'users.user' item.id}}#{{item.id}} - {{item.name}} ({{item.website}}){{/link-to}}</p>
+<p>{{#link-to 'user' item.id}}#{{item.id}} - {{item.name}} ({{item.website}}){{/link-to}}</p>
 {{/each}}
         </td>
-        <td>{{outlet}}
-</td>
+        <td>{{outlet}}</td>
     </tr>
 </table>
