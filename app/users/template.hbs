@@ -1,0 +1,11 @@
+<table border="1" width="100%">
+    <tr>
+        <td>
+{{#each model as |item|}}
+<p>#{{item.id}} - {{item.name}} ({{item.website}})</p>
+{{/each}}
+        </td>
+        <td>{{outlet}}
+</td>
+    </tr>
+</table>
