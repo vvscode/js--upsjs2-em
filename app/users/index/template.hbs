@@ -1,0 +1,13 @@
+<div class="ui middle aligned animated list">
+  {{#each model as |item|}}
+    {{#link-to 'users.user' item.id class="item"}}
+      <div class="content">
+        <div class="header">
+          <i class="users icon"></i>{{item.name}}
+        </div>
+        <i class="linkify icon"></i>{{item.website}}
+      </div>
+    {{/link-to}}
+  {{/each}}
+</div>
+{{outlet}}

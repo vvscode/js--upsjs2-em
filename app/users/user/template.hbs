@@ -1,0 +1,19 @@
+{{!-- http://semantic-ui.com/collections/menu.html --}}
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+        {{#each model.users as |item|}}
+          {{#link-to 'users.user' item.id class="item"}}
+            <i class="users icon"></i>{{item.name}}
+          {{/link-to}}
+        {{/each}}
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <h1>#{{model.id}} - {{model.user.name}}</h1>
+      <h2>{{model.user.company.name}}</h2>
+    </div>
+  </div>
+</div>
+{{outlet}}
