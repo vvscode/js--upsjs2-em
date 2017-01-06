@@ -9,6 +9,9 @@ export default Ember.Controller.extend({
         },
         makeBlue() {
             this.set('color', 'blue');
+        },
+        setColor(color) {
+            this.set('color', color);
         }
     }
 });
