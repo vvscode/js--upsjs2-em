@@ -12,6 +12,9 @@ const COLORS = [
 
 export default Ember.Controller.extend({
     color: 'white',
+    top: 100,
+    right: 100,
+    step: 50,
 
     actions: {
         makeRed() {
@@ -29,6 +32,18 @@ export default Ember.Controller.extend({
             let newColorIndex = newIndex % COLORS.length;
             let newColor =  COLORS[newColorIndex];
             this.set('color', newColor);
+        },
+        move(direction) {
+            const step = this.get('step');
+            if(direction === 'up') {
+                this.set('top', this.get('top') - step);
+            } else if (direction === 'down') {
+                this.set('top', this.get('top') + step);
+            } else if (direction === 'right') {
+                this.set('right', this.get('right') - step);
+            } else if (direction === 'left') {
+                this.set('right', this.get('right') + step);
+            }
         }
     }
 });
