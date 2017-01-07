@@ -1,4 +1,14 @@
-<h1>Posts</h1>
+<div class="ui ordered list">
+    {{#each model as |post|}}
+        <div class="item">
+            <div class="content">
+                <img src="https://unsplash.it/g/75/75?image=1{{post.id}}" align="left"/>
+                <div class="header">{{post.title}} <sub><i class="user icon"></i> {{post.user.name}}</sub></div>
+                <div class="description">{{post.body}}</div>
+            </div>
+        </div>
+    {{/each}}
+</div>
 
 {{outlet}}
 
