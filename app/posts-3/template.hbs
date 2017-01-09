@@ -1,0 +1,9 @@
+<ol>
+    {{#each model as |item index|}}
+        {{#if (less-then index 20)}}
+            <li>{{item.title}}</li>
+        {{/if}}
+    {{/each}}
+</ol>
+
+{{outlet}}
