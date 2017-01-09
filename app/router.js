@@ -11,6 +11,7 @@ Router.map(function() {
   });
   this.route('posts');
   this.route('posts-1');
+  this.route('posts-2');
 });
 
 export default Router;

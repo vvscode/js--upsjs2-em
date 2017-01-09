@@ -1,0 +1,7 @@
+<ol>
+    {{#each (first-of-list model 20) as |item|}}
+        <li>{{item.title}}</li>
+    {{/each}}
+</ol>
+
+{{outlet}}
