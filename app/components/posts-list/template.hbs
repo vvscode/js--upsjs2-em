@@ -1,5 +1,9 @@
 <h2>Posts component</h2>
+{{#if activePost}}
+    <strong>Last active post: {{activePost.title}}</strong>
+{{/if}}
+
 {{#each posts as |currentPost|}}
-    {{posts-list/post-item post=currentPost}}
+    {{posts-list/post-item post=currentPost onPostClick=(action 'onPostSelect')}}
 {{/each}}
 {{yield}}
