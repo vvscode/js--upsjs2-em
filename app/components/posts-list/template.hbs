@@ -4,6 +4,10 @@
 {{/if}}
 
 {{#each posts as |currentPost|}}
-    {{posts-list/post-item post=currentPost onPostClick=(action 'onPostSelect')}}
+    {{posts-list/post-item 
+        showBody=false
+        post=currentPost 
+        onPostClick=(action 'onPostSelect')
+        }}
 {{/each}}
 {{yield}}
