@@ -6,7 +6,12 @@ export default Ember.Component.extend({
 
     actions: {
         onPostSelect(post) {
-            this.set('activePost', post);
+            let activePost = this.get('activePost');
+            if (activePost === post) {
+                this.set('activePost', null);
+            } else {
+                this.set('activePost', post);
+            }
         }
     }
 });
