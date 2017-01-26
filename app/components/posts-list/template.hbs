@@ -1,5 +1,5 @@
 <h2>Posts component</h2>
-{{#each posts as |post|}}
-    {{post.title}}<br />
+{{#each posts as |currentPost|}}
+    {{posts-list/post-item post=currentPost}}
 {{/each}}
 {{yield}}
