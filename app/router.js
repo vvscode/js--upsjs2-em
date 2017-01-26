@@ -10,6 +10,7 @@ Router.map(function() {
       this.route('user',  { path: '/:user_id' });
   });
   this.route('posts');
+  this.route('toggler');
 });
 
 export default Router;
